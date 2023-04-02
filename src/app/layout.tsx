@@ -1,6 +1,5 @@
-import NavbarMobile from '@/components/NavbarMobile';
-import NavbarPc from '@/components/NavbarPc';
 import './globals.css';
+import ReduxProvider from './redux/ReduxProvider';
 
 export const metadata = {
     title: 'home',
@@ -14,10 +13,8 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className="min-h-screen md:w-[1900px] w-screen md:flex bg-slate-50">
-                <NavbarPc />
-                <NavbarMobile />
-                {children}
+            <body className="">
+                <ReduxProvider>{children}</ReduxProvider>
             </body>
         </html>
     );
